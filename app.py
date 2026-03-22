@@ -101,7 +101,7 @@ def checkout():
             total += p[0] * qty
     conn.close()
     return render_template('checkout.html', total=total)
-@app.route('/admin')
+@app.route('/admin.')
 def admin():
     conn = sqlite3.connect('shop.db')
     c = conn.cursor()
@@ -112,7 +112,7 @@ def admin():
     c.execute('SELECT SUM(total) FROM orders')
     total_revenue = c.fetchone()[0] or 0
     conn.close()
-    return render_template('admin.
+    return render_template('admin.html', orders=orders, total_orders=total_orders, total_revenue=round(total_revenue, 2))
 if __name__ == '__main__':
     init_db()
     app.run(debug=True, port=5000)
