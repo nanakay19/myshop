@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Placed!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; background: #f0fff0; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+        .success-card { background: white; border-radius: 15px; padding: 40px; text-align: center; box-shadow: 0 2px 20px rgba(0,0,0,0.1); max-width: 400px; width: 90%; }
+        .checkmark { font-size: 5em; margin-bottom: 20px; }
+        h1 { color: #1a7a1a; margin-bottom: 15px; }
+        p { color: #666; margin-bottom: 25px; line-height: 1.6; }
+        .home-btn { background: #1a7a1a; color: white; padding: 15px 30px; border-radius: 5px; text-decoration: none; font-size: 1.1em; }
+        .home-btn:hover { background: #27ae60; }
+    </style>
+</head>
+<body>
+    <div class="success-card">
+        <div class="checkmark">✅</div>
+        <h1>Order Placed!</h1>
+        <p>Thank you <strong>{{name}}</strong>! Your order has been received. We will contact you shortly to confirm delivery.</p>
+        <a href="/" class="home-btn">← Continue Shopping</a>
+    </div>
+</body>
+</html>
